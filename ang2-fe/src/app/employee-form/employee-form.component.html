@@ -1,0 +1,71 @@
+    <p-panel header="Details of an employee" *ngIf="employee" >
+        <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">First Name *:</div>
+                <div class="ui-grid-col-5">
+                    <input type="text" pInputText [(ngModel)]="employee.firstName" disabled="{{disabledOnChange}}" />
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">Last Name :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="employee.lastName"  disabled="{{disabledOnChange}}" />
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">JobId :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="jobId" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Hire Date :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="employee.hireDate" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Job History :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" disabled="true" [(ngModel)]="jobHistoryList" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Phone Number :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="employee.phoneNumber" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Employee List :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" disabled="true" [(ngModel)]="employeeList" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Department Id :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="departmentId" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Manager :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" disabled="true" [(ngModel)]="manager" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Salary :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="employee.salary" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Email :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="employee.email" />
+                </div>
+            </div><div class="ui-grid-row">
+                <div class="ui-grid-col-2">Comission percent :</div>
+                <div class="ui-grid-col-5">
+                    <input pInputText type="text" [(ngModel)]="employee.commissionPct" />
+                </div>
+            </div>
+        </div>
+        <div style="text-align: right">
+        <button pButton type="button" label="Save the changes" icon="fa-check" (click)="onAddNewEmployee()" ></button>
+        <button pButton type="button" label="Cancel" icon="fa-close" (click)="onCancel()" ></button>
+        </div>
+    </p-panel>

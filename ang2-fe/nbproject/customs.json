@@ -1,0 +1,31 @@
+{
+    "elements": {
+        "app-emp-table": {},
+        "p-growl": {},
+        "p-column": {},
+        "router-outlet": {},
+        "p-panel": {
+            "attributes": {
+                "header": {}
+            }
+        },
+        "p-dataTable": {}
+    },
+    "attributes": {
+        "[(ngmodel)]": {},
+        "*ngif": {},
+        "formcontrolname": {
+            "context": "input"
+        },
+        "pinputtext": {
+            "context": "input"
+        },
+        "label": {
+            "context": "button"
+        },
+        "routerlink": {},
+        "pbutton": {
+            "context": "button"
+        }
+    }
+}
