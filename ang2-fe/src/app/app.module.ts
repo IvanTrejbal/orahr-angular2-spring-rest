@@ -25,7 +25,7 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component'
         HttpModule,
         AppRoutingModule,
         RestangularModule.forRoot((RestangularProvider) => {
-            RestangularProvider.setBaseUrl('http://localhost:8080/api');
+            RestangularProvider.setBaseUrl('http://localhost:8085/api');
             RestangularProvider.addResponseInterceptor((data, operation, what, url, response) => {
                 if(! data._embedded  )
                     return data;

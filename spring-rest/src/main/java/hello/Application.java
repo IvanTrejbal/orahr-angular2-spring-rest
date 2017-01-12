@@ -26,47 +26,7 @@ import org.springframework.web.filter.CorsFilter;
 @SpringBootApplication
 public class Application {
     
-  private static final String ORACLE_CONNECTION = "jdbc:oracle:thin:@192.168.1.56:1521:XE";
-
-    
-    
-    @Bean
-    public DataSource dataSource()  throws SQLException{
-
-        OracleDataSource dataSource = new OracleDataSource();
-        dataSource.setUser("hr");
-        dataSource.setPassword("hr");
-        dataSource.setURL(ORACLE_CONNECTION);
-        dataSource.setImplicitCachingEnabled(true);
-        dataSource.setFastConnectionFailoverEnabled(true);
-        return dataSource;
-    }
-
-    @Bean
-    public EntityManagerFactory entityManagerFactory() throws SQLException {
-
-        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        vendorAdapter.setGenerateDdl(false);
-
-        LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
-        factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("hello.hr.entities");
-        factory.setDataSource(dataSource());
-        factory.afterPropertiesSet();
-
-        
-        
-        return factory.getObject();
-    }
-
-    @Bean
-    public PlatformTransactionManager transactionManager() throws SQLException {
-
-        JpaTransactionManager txManager = new JpaTransactionManager();
-        txManager.setEntityManagerFactory(entityManagerFactory());
-        return txManager;
-    }   
-   
+//   
 //    cannot work because of :  https://jira.spring.io/browse/DATAREST-573
 //    @Bean
 //    public WebMvcConfigurer corsConfigurer() {
