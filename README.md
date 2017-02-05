@@ -1,13 +1,13 @@
 # orahr-angular2-spring-rest
-This is a learning project - aim is to learn how to write __angular2__ application against __rest__ api
+This is a learning project - the aim is to learn how to write __angular2__ application against __rest__ api
 back-end. 
 ### our basic building blocks are
-on the front-end:
+###on the front-end:
  + angular2
  + prime ng components
  + ng2-restangular library
  
- on the back-end:
+###on the back-end:
  + Spring Boot
  + Spring Data Rest  ( JPA, Hibernate )
  + Oracle Expres edition XE 
@@ -24,5 +24,6 @@ on the front-end:
  
  + alter trigger "HR"."UPDATE_JOB_HISTORY" disable;
  
+ ![](/hr.png)
  
 For now the projects for "front end" and "back end" are completely separate.
