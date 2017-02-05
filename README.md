@@ -15,10 +15,14 @@ on the front-end:
  The choice of database was done as a convenience - in installation of Express edition
  there is the HR schema ("Human resources") with 7 tables such as Employees, Jobs etc.. It is
  not as trivial as most examples found in tutorials and it is already filled with some data. 
+ 
  To start using HR database we have to unlock HR user :
+ 
  + alter user HR ACCOUNT UNLOCK IDENTIFIED BY HR;
+ 
  and disable trigger on "EMPLOYEE" table: 
- +alter trigger "HR"."UPDATE_JOB_HISTORY" disable;
+ 
+ + alter trigger "HR"."UPDATE_JOB_HISTORY" disable;
  
  
 For now the projects for "front end" and "back end" are completely separate.
